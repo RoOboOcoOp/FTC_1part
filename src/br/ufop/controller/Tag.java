@@ -8,8 +8,9 @@ import java.lang.*;
  */
 
  public class Tag{
-    //objeto tag fará a comparação com a pilha
-     
+    /*objeto tag fará a comparação com a pilha
+     Construtor da classe com atributos nome e expressão regular
+     */
     String nome;
     String expreg;
         
@@ -17,9 +18,6 @@ import java.lang.*;
         this.nome = nome;
         this.expreg = expreg;
     }
-    //public Tag() {
-      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    //}
         public String getNome() {
             return nome;
         }

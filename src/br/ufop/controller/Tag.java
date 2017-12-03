@@ -15,11 +15,9 @@ import java.lang.*;
         this.nome = nome;
         this.expreg = expreg;
     }
-    
-
-    public Tag() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //public Tag() {
+      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
         public String getNome() {
             return nome;
         }

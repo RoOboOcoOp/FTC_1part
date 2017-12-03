@@ -21,8 +21,7 @@ public class InterfaceUser {
     private static Scanner ler;
 
     /**
-     *
-     * @param args
+     *@param args
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
@@ -32,7 +31,7 @@ public class InterfaceUser {
         //List<String> inicial = new ArrayList<String>();
 
         //entradas do usuário
-        System.out.println("\t Informe a entrada \t");
+        System.out.println("------\t Informe a entrada \t-----------");
         ler = new Scanner(System.in);
         inicial = ler.nextLine();
         //Entrada tagUsuario = new Entrada(); 
@@ -43,7 +42,7 @@ public class InterfaceUser {
         
         do {
             String menu = null;
-            System.out.println("------\t Analisador de Strings \t------");
+            System.out.println("------\t ANALISADOR de TAGS \t------");
             System.out.println(":f - Realizar divisão em tags da string do arquivo informado;");
             System.out.println(":l - Carregar um arquivo com definições de tags;");
             System.out.println(":o - Especificar o caminho do arquivo de saída para a divisão em tags;");
@@ -66,7 +65,8 @@ public class InterfaceUser {
                      */
                     String caminho;
 
-                    System.out.println("------\t Realizando divisão em tags da string do arquivo informado \t------");
+                    System.out.println("------\t Realizar divisão em tags, da string do arquivo informado \t------");
+                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
                     System.out.println("Informe o caminho do arquivo:");
                     caminho = ler.next();
 
@@ -76,9 +76,9 @@ public class InterfaceUser {
                     String arq = ("\\input.txt");
 
                     if (!WriteTag(caminho + arq, inicial)) {
-                        System.out.println("Erro ao salvar o arquivo!");
+                        System.out.println("[ERRO] Arquivo não foi salvo!");
                     } else {
-                        System.out.println("Arquivo salvo com sucesso!");
+                        System.out.println("[INFO]Arquivo salvo com sucesso!");
                     }
                 }
                 break;
@@ -89,15 +89,21 @@ public class InterfaceUser {
                     String caminho;
 
                     System.out.println("------\t Carregar um arquivo \"tags.lex\" com definições de tags \t------");
+                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
+
                     System.out.println("Informe o caminho do arquivo:");
                     caminho = ler.next();
-
+                        if(caminho==null){
+                            System.out.println("[WARNING] Informe um caminho válido para o arquivo");
+                        }
+                    
                     String arq;
                     arq = Read(caminho);
                     if(arq==null){
-                        System.out.println("[INFO] As definições de tags não foram carregadas");
+                        System.out.println("[ERRO] As definições de tags não foram carregadas");
                     }
                     System.out.println(arq);
+                        System.out.println("[INFO] As definições de tags não foram carregadas");
 
                 }
                 break;
@@ -109,16 +115,22 @@ public class InterfaceUser {
                     String caminho;
 
                     System.out.println("------\t Especifica o caminho do arquivo de saída \"output.txt\" para a divisão em tags \t------");
+                     System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
                     System.out.println("Informe o caminho do arquivo:");
+                    
                     caminho = ler.next();
+                         if(caminho==null){
+                            System.out.println("[WARNING] Informe um caminho válido para o arquivo");
+                        }
+                    
 
                     /*
                      Implementar o método que cria as tags.
                      */
                     if (WriteTag(caminho + "\\output.txt", "Ohhhhhh")) {
-                        System.out.println("Arquivo foi salvo com sucesso!");
+                        System.out.println("[INFO]Arquivo foi salvo com sucesso!");
                     } else {
-                        System.out.println("Erro ao salvar o arquivo!");
+                        System.out.println("[ERRO] ao salvar o arquivo!");
                     }
 
                 }
@@ -133,7 +145,7 @@ public class InterfaceUser {
                     System.out.println("------\t Realiza a divisão em tags da entrada do usuario \t-------");
                     retorno_entrada = entradaUser.identificaTag(inicial);
                     
-                    System.out.println("Saída se entrada de usuário é uma TAG: " + Arrays.toString(retorno_entrada));
+                    System.out.println("[INFO]Saída se entrada de usuário é uma TAG: " + Arrays.toString(retorno_entrada));
                     //System.out.println("Tags inforomadas divididas com sucesso!!!\n");
                     //identificaTag(inicial);
                     
@@ -144,6 +156,7 @@ public class InterfaceUser {
                      * Imprime todas as Tags validas, tanto as de arquivo quanto as inseridas
                      */
                     System.out.println("------\t Imprime as Tags válidas \t-------");
+                    
                     break;
                 }
                 case ":q": {
@@ -151,7 +164,7 @@ public class InterfaceUser {
                      * Realiza a saída do programa
                      */
                 }
-                System.out.println("Saindo do programa, obrigado pela visita!!!!");
+                System.out.println("[INFO]Saindo do programa, obrigado pela visita!!!!");
                 exit = true;
                 break;
                 case ":s": {
@@ -181,14 +194,14 @@ public class InterfaceUser {
                     System.out.println(Arrays.toString(tagVet));
 
                     if (WriteTagVet(caminho + "\\file.txt", tagVet, tags_qtde)) {
-                        System.out.println("Arquivo salvo com sucesso!");
+                        System.out.println("[INFO]Arquivo salvo com sucesso!");
                     } else {
-                        System.out.println("Erro ao salvar o arquivo!");
+                        System.out.println("[ERRO] ao salvar o arquivo!");
                     }
                 }
                 break;
                 default:
-                    System.out.println("O comando não pode ser reconhecido pelo menu!");
+                    System.out.println("[WARNING]O comando não pode ser reconhecido pelo menu!");
                     break;
             }
 

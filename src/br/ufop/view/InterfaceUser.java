@@ -3,6 +3,7 @@
 
 
 package br.ufop.view;
+package br.ufop
 
 import br.ufop.controller.Tag;
 import static br.ufop.model.GerArquivo.Read;

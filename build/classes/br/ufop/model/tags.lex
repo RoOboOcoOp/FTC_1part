@@ -3,3 +3,4 @@ VAR: a+b+c+d+e+f+g+h+i+*.
 SPACE:  .
 COMMENT: /*+*/.
 EQUALS: =.
+sady mmmsk

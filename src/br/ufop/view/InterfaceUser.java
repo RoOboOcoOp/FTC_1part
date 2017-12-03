@@ -154,7 +154,7 @@ public class InterfaceUser {
                     int num;
                     String caminho;
                     System.out.println("------\t Imprime as Tags válidas \t-------");
-                    System.out.println("\tQual arquivo gostaria de verificar primeiro?\n1- tags.lex\n2- arquivo.txt\n");
+                    System.out.println("\tQual arquivo gostaria de verificar primeiro?\n1- tags.lex\n2- file.txt\n");
                     num = ler.nextInt();
                     if(num==1){
                         System.out.println("\tArquivo tags.lex:\n");
@@ -177,7 +177,7 @@ public class InterfaceUser {
                         System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+Arrays.toString(resultado1));
                     }
                     else if(num==2){
-                        System.out.println("\tArquivo arquivo.txt:\n");
+                        System.out.println("\tArquivo file.txt:\n");
                         System.out.println("Informe o caminho do arquivo:");
                         String caminho2 = ler.next();
                             if(caminho2==null){

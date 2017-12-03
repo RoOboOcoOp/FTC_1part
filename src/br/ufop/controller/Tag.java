@@ -1,5 +1,5 @@
 package br.ufop.controller;
-import java.util.Stack;
+
 
 /**
  *
@@ -28,12 +28,9 @@ import java.util.Stack;
         public void setExpreg(String expreg) {
           this.expreg = expreg;
         }
-    /**
-     *
-     * @param inicial
-     */
-    
-    public static void identificaTag(String inicial){
+
+    public void identificaTag(String inicial){
+        
         PilhaTag pilha = new PilhaTag(); 
         Tag tag = new Tag();
         //Tag t new = tag(nome,expreg);
@@ -44,12 +41,14 @@ import java.util.Stack;
             tag.nome = quebra[0];
             tag.expreg = quebra[1];
             
-            
+            //teste para split 
             System.out.println("quebra"+quebra[0]+"quebra2"+quebra[1]);
-                
+            
+            /*
             for(i=0; i<tag.expreg.length(); i++){
-                      //pilha.insere();
-                }
+                      //pilha.insere(tag.expreg.toString());
+            }
+            */
         }
         else{
             System.out.println("A String Informada não é uma Tag");

@@ -1,16 +1,11 @@
 package br.ufop.view;
 
-import static br.ufop.controller.Tag.identificaTag;
 import static br.ufop.model.GerArquivo.Read;
 import static br.ufop.model.GerArquivo.WriteTag;
 import static br.ufop.model.GerArquivo.WriteTagVet;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.*;
-import java.util.ArrayList;
 import java.util.Arrays;
-import static java.util.Date.parse;
-import java.util.List;
 import java.util.Scanner;
 
 /**

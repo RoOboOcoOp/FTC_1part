@@ -11,7 +11,6 @@ import java.util.Scanner;
 
 /**
  * Interface gerenciadora com o usuario onde estão contidos as opções do menu.
- *
  * @author Fabio Humberto de Carvalho 13.2.8398 / Wuldson Fernandes 12.1.839 / Leonardo Oliveira 12.2.8343
  * @version 1.0
  * @since 03/12/2017
@@ -43,14 +42,14 @@ public class InterfaceUser {
         do {
             String menu = null;
             System.out.println("------\t ANALISADOR de TAGS \t------");
-            System.out.println(":f - Realizar divisão em tags da string do arquivo informado;");
-            System.out.println(":l - Carregar um arquivo com definições de tags;");
-            System.out.println(":o - Especificar o caminho do arquivo de saída para a divisão em tags;");
-            System.out.println(":p - Realizar divisão em tags da entrada informada;");
-            System.out.println(":s - Salvar as tags;");
-            System.out.println(":t - Imprimir Tags válidas;");
-            System.out.println(":s - Salvar as tags.");
-            System.out.println(":q - Sair do programa.\n");
+            System.out.println(":f - Realizar divisão em tags da string do arquivo informado;[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO");
+            System.out.println(":l - Carregar um arquivo com definições de tags;[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO");
+            System.out.println(":o - Especificar o caminho do arquivo de saída para a divisão em tags;[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO");
+            System.out.println(":p - Realizar divisão em tags da entrada informada;[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO");
+            System.out.println(":s - Salvar as tags;[WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO");
+            System.out.println(":t - Imprimir Tags válidas;[WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO");
+            System.out.println(":s - Salvar as tags.[WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO");
+            System.out.println(":q - Sair do programa.\n[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO");
 
             while (menu == null) {
                 System.out.print("\nEntre com o comando:\n");
@@ -66,7 +65,6 @@ public class InterfaceUser {
                     String caminho;
 
                     System.out.println("------\t Realizar divisão em tags, da string do arquivo informado \t------");
-                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
                     System.out.println("Informe o caminho do arquivo:");
                     caminho = ler.next();
 
@@ -89,8 +87,6 @@ public class InterfaceUser {
                     String caminho;
 
                     System.out.println("------\t Carregar um arquivo \"tags.lex\" com definições de tags \t------");
-                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
-
                     System.out.println("Informe o caminho do arquivo:");
                     caminho = ler.next();
                         if(caminho==null){
@@ -115,14 +111,13 @@ public class InterfaceUser {
                     String caminho;
 
                     System.out.println("------\t Especifica o caminho do arquivo de saída \"output.txt\" para a divisão em tags \t------");
-                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
                     System.out.println("Informe o caminho do arquivo:");
                     
                     caminho = ler.next();
                          if(caminho==null){
                             System.out.println("[WARNING] Informe um caminho válido para o arquivo");
                         }
-                    if (WriteTag(caminho + "\\output.txt", "Escrevendo arquivo....")) {
+                    if (WriteTag(caminho + "\\output.txt", "[WARNING]Escrevendo arquivo....")) {
                         System.out.println("[INFO] Arquivo foi salvo com sucesso!");
                     } else {
                         System.out.println("[ERRO] Ao salvar o arquivo!");

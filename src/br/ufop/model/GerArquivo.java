@@ -8,9 +8,9 @@ import java.io.PrintWriter;
 import java.lang.reflect.Array;
 
 /** Classe onde estarão os metodos para leitura e escrita em arquivo (entrada e saída).
-    * @author Fabio Humberto de Carvalho 13.2.8398 / Wuldson Fernandes 12.1.839
-    * @version 0.01
-    * @since 04/07/2017
+    * @author Fabio Humberto de Carvalho 13.2.8398 / Wuldson Fernandes 12.1.839 / Leonardo Oliveira 12.2.8343
+    * @version 1.0
+    * @since 03/12/2017
 */
 public class GerArquivo {
 	private static BufferedReader read;

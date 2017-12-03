@@ -31,8 +31,8 @@ public class InterfaceUser {
     public static void main(String[] args) throws IOException {
         //variaveis globais 
         boolean exit = false;
-        //String inicial;
-        List<String> inicial = new ArrayList<String>();
+        String inicial;
+        //List<String> inicial = new ArrayList<String>();
 
         //entradas do usuário
         System.out.println("\t Informe a entrada \t");
@@ -43,9 +43,7 @@ public class InterfaceUser {
         System.out.println("COMMENT: /*+*/.");
         System.out.println("EQUALS: =");
         
-        //inicial = ler.nextLine();
-        
-        
+        inicial = ler.nextLine();
         
         /*System.out.println(tagDivida);*/
         
@@ -56,14 +54,11 @@ public class InterfaceUser {
             System.out.println(":f - Realizar divisão em tags da string do arquivo informado;");
             System.out.println(":l - Carregar um arquivo com definições de tags;");
             System.out.println(":o - Especificar o caminho do arquivo de saída para a divisão em tags;");
-<<<<<<< HEAD
             System.out.println(":P - Realizar divisão em tags da entrada informada;");
             System.out.println(":s - Salvar as tags;");
             System.out.println(":t - Imprimir Tags válidas;");
-=======
             System.out.println(":P - Realizar divisão em tags da entrada informada e exibe na tela;");
             System.out.println(":s - Salvar as tags.");
->>>>>>> c4c82c811dabdcbf076961c54fb0a543bcfdc51f
             System.out.println(":q - Sair do programa.\n");
 
             while (menu == null) {
@@ -144,13 +139,14 @@ public class InterfaceUser {
                      */
                     System.out.println("------\t Realiza a divisão em tags da entrada do usuario \t-------");
                     System.out.println("Tags inforomadas divididas com sucesso!!!\n");
+                    //identificaTag(inicial);
                 }
                 break;
                 case ":t":{
                     /**
                      * Imprime todas as Tags validas, tanto as de arquivo quanto as inseridas
                      */
-                    System.out.println("------\t Imprime as Tags válidas \t-------")
+                    System.out.println("------\t Imprime as Tags válidas \t-------");
                     break;
                 }
                 case ":q": {

@@ -22,9 +22,8 @@ public class EntradaUsuario {
             //Tag t new = tag(nome,expreg);
             int i;
             int conter = inicial.length();
-            String[] resultado = "";
-                do{
-                    String[] quebra = "";
+            String[] resultado = null;
+                    String[] quebra;
                     if(inicial.contains(": ")){
                         
                         quebra = inicial.split(": ", 2);
@@ -41,15 +40,17 @@ public class EntradaUsuario {
                               //pilha.insere(tag.expreg.toString());
                         }
                         */
-                    }
-                    else{
-                        continue;
-                }
-                    resultado += quebra+resultado;
-                }while(conter!=0);
-                return resultado;
-                
-        return null;        
+                    resultado = quebra;
+                    
+                    //resultado += new String[quebra.length resultado.length];
+                    /*StringBuilder medicamento = new StringBuilder();
+                    ItemContratacao item = new ItemContratacao();
+                        for (ItemContratacao item: contrato) {
+                            medicamento.apend(item.getDs_material());
+                        medicamento.append(";");
+                    }*/
+                    
+                    } 
+                    return resultado;
     }
-    
 }

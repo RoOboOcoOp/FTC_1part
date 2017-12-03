@@ -6,8 +6,10 @@ import static br.ufop.model.GerArquivo.WriteTagVet;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import static java.util.Date.parse;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -29,23 +31,39 @@ public class InterfaceUser {
     public static void main(String[] args) throws IOException {
         //variaveis globais 
         boolean exit = false;
-        String inicial;
+        //String inicial;
+        List<String> inicial = new ArrayList<String>();
 
         //entradas do usuário
-        System.out.println("------\t Informe a STRING principal \t------");
+        System.out.println("\t Informe a entrada \t");
         ler = new Scanner(System.in);
-        inicial = ler.nextLine();
-
-        System.out.println(inicial);
+        System.out.println("INT: 01+2+3+4+5+6+7+8+9+*.");
+        System.out.println("VAR: a+b+c+d+e+f+g+h+i+*");
+        System.out.println("SPACE:  ");
+        System.out.println("COMMENT: /*+*/.");
+        System.out.println("EQUALS: =");
+        
+        //inicial = ler.nextLine();
+        
+        
+        
+        /*System.out.println(tagDivida);*/
+        
+        
         do {
             String menu = null;
             System.out.println("------\t Analisador de Strings \t------");
             System.out.println(":f - Realizar divisão em tags da string do arquivo informado;");
             System.out.println(":l - Carregar um arquivo com definições de tags;");
             System.out.println(":o - Especificar o caminho do arquivo de saída para a divisão em tags;");
+<<<<<<< HEAD
             System.out.println(":P - Realizar divisão em tags da entrada informada;");
             System.out.println(":s - Salvar as tags;");
             System.out.println(":t - Imprimir Tags válidas;");
+=======
+            System.out.println(":P - Realizar divisão em tags da entrada informada e exibe na tela;");
+            System.out.println(":s - Salvar as tags.");
+>>>>>>> c4c82c811dabdcbf076961c54fb0a543bcfdc51f
             System.out.println(":q - Sair do programa.\n");
 
             while (menu == null) {
@@ -124,7 +142,7 @@ public class InterfaceUser {
                      * implementado pelo Controler (Gerenciador) metodo
                      * responsável comparaTags(string);
                      */
-                    System.out.println("------\t Realiza a divisão em tags da STRING informada \t-------");
+                    System.out.println("------\t Realiza a divisão em tags da entrada do usuario \t-------");
                     System.out.println("Tags inforomadas divididas com sucesso!!!\n");
                 }
                 break;

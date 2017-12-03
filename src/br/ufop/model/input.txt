@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 qwertyu
+=======
+p =1+x
+>>>>>>> c4c82c811dabdcbf076961c54fb0a543bcfdc51f

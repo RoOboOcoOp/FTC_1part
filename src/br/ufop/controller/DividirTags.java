@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class DividirTags {
     public ArrayList<String> comparaTags(String string){
-        // Recebe uma string ou arquivo cria estrutura de lista para receber cada TAG relativa a entrada do usuário em sua posição correspondente
+        // Recebe uma string ou arquivo cria estrutura de pilha para receber cada TAG relativa a entrada do usuário em sua posição correspondente
         ArrayList<String> ArrayList = null;
         return ArrayList;
     }

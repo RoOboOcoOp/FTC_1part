@@ -1,4 +1,5 @@
 package br.ufop.view;
+package br.ufop
 
 import static br.ufop.model.GerArquivo.Read;
 import static br.ufop.model.GerArquivo.WriteTag;

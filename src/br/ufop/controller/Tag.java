@@ -38,7 +38,7 @@ package br.ufop.controller;
       
         if(inicial.contains(": ")){
             String[] quebra = inicial.split(": ", 2);
-            tag.nome = quebra[0];
+            tag.nome = quebra[0].toUpperCase();
             tag.expreg = quebra[1];
             
             //teste para split 

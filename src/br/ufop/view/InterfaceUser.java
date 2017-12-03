@@ -1,5 +1,10 @@
+
+
+
+
 package br.ufop.view;
 
+import br.ufop.controller.Tag;
 import static br.ufop.model.GerArquivo.Read;
 import static br.ufop.model.GerArquivo.WriteTag;
 import static br.ufop.model.GerArquivo.WriteTagVet;
@@ -33,8 +38,9 @@ public class InterfaceUser {
         //entradas do usuário
         System.out.println("\t Informe a entrada \t");
         ler = new Scanner(System.in);
-        
         inicial = ler.nextLine();
+        //Entrada tagUsuario = new Entrada(); 
+        EntradaUsuario entradaUser = new EntradaUsuario();
         
         /*System.out.println(tagDivida);*/
         
@@ -128,7 +134,7 @@ public class InterfaceUser {
                      * responsável comparaTags(string);
                      */
                     System.out.println("------\t Realiza a divisão em tags da entrada do usuario \t-------");
-                    identificaTag(inicial);
+                    entradaUser.identificaTag(inicial);
                     System.out.println("Tags inforomadas divididas com sucesso!!!\n");
                     //identificaTag(inicial);
                     
@@ -166,9 +172,7 @@ public class InterfaceUser {
                     caminho = ler.next();
 
                     tagVet = new String[tags_qtde];
-                    
-                    
-                    
+    
                     for (int i = 0; i < tags_qtde; i++) {
                         System.out.println("Informe a " + (i + 1) + " tag :\t");
                         tagVet[i] = tag.nextLine();

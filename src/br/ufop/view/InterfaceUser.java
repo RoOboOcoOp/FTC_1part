@@ -42,14 +42,14 @@ public class InterfaceUser {
         do {
             String menu = null;
             System.out.println("------\t ANALISADOR de TAGS \t------");
-            System.out.println(":f - Realizar divisão em tags da string do arquivo informado;[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO");
-            System.out.println(":l - Carregar um arquivo com definições de tags;[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO");
-            System.out.println(":o - Especificar o caminho do arquivo de saída para a divisão em tags;[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO");
-            System.out.println(":p - Realizar divisão em tags da entrada informada;[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO");
-            System.out.println(":s - Salvar as tags;[WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO");
-            System.out.println(":t - Imprimir Tags válidas;[WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO");
-            System.out.println(":s - Salvar as tags.[WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO");
-            System.out.println(":q - Sair do programa.\n[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO");
+            System.out.println(":f - Realizar divisão em tags da string do arquivo informado [INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO;");
+            System.out.println(":l - Carregar um arquivo com definições de tags [INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO;");
+            System.out.println(":o - Especificar o caminho do arquivo de saída para a divisão em tags [INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO;");
+            System.out.println(":p - Realizar divisão em tags da entrada informada [INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO;");
+            System.out.println(":s - Salvar as tags[WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO;");
+            System.out.println(":t - Imprimir Tags válidas [WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO;");
+            System.out.println(":s - Salvar as tags [WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO;");
+            System.out.println(":q - Sair do programa.[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO;");
 
             while (menu == null) {
                 System.out.print("\nEntre com o comando:\n");
@@ -133,7 +133,6 @@ public class InterfaceUser {
                      */
                     String[] retorno_entrada;
                     System.out.println("------\t Realiza a divisão em tags da entrada do usuario \t-------");
-                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
                     retorno_entrada = entradaUser.identificaTag(inicial);
                     
                     System.out.println("[INFO]Saída se entrada de usuário é uma TAG: " + Arrays.toString(retorno_entrada));
@@ -144,12 +143,9 @@ public class InterfaceUser {
                 break;
                 case ":t":{
                     /**
-                     * Imprime todas as Tags validas, tanto as de arquivo quanto as inseridas
+                     * Imprime todas as Tags validas salvas em arquivo
                      */
                     System.out.println("------\t Imprime as Tags válidas \t-------");
-                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
-                    
-                    
                     break;
                 }
                 case ":q": {
@@ -158,7 +154,6 @@ public class InterfaceUser {
                      */
                 }
                 System.out.println("[INFO]Saindo do programa, obrigado pela visita!!!!");
-                System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
                 exit = true;
                 break;
                 case ":s": {
@@ -171,8 +166,7 @@ public class InterfaceUser {
                     String tagVet[];
 
                     System.out.println("------\t Salva as tags no arquivo \"file.txt\" \t-------");
-                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
-                    
+                                        
                     System.out.println("Informe a quantidade de tags");
                     tags_qtde = ler.nextInt();
 

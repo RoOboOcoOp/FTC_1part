@@ -47,8 +47,8 @@ public class EntradaUsuario {
             //Tag t new = tag(nome,expreg);
             int i;
             String[] resultado = null;
-                    String[] quebra;
-                    do{
+                    String[] quebra = null;
+                    
                         if(arq.contains(": ")){
                         
                             quebra = arq.split(": ", 2);
@@ -65,11 +65,13 @@ public class EntradaUsuario {
                                 //pilha.insere(tag.expreg.toString());
                             }
                             */
-                        resultado = quebra;
-                    
+                        
+                        
                         }       
                     
-                    }while(arq.contains(":")); 
+                     
+                    resultado = quebra;
+                    
                     return resultado;
     }
 }

@@ -47,7 +47,6 @@ public class InterfaceUser {
             System.out.println(":l - Carregar um arquivo com definições de tags [INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO;");
             System.out.println(":o - Especificar o caminho do arquivo de saída para a divisão em tags [INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO;");
             System.out.println(":p - Realizar divisão em tags da entrada informada [INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO;");
-            System.out.println(":s - Salvar as tags[WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO;");
             System.out.println(":t - Imprimir Tags válidas [WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO;");
             System.out.println(":s - Salvar as tags [WARNING]FUNCIONALIDADE NÃO OK 1ªPARTE DO TRABALHO;");
             System.out.println(":q - Sair do programa.[INFO] FUNCIONALIDADE OK 1ª PARTE TRABALHO;");
@@ -81,8 +80,8 @@ public class InterfaceUser {
                     System.out.println(arq);
                         System.out.println("[INFO] O arquivo foi lido!");
                     
-                    String resultado[] = entradaUser.identificaTag_Arqivo(arq);
-                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+resultado);
+                    String resultadof[] = entradaUser.identificaTag_Arqivo(arq);
+                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+resultadof);
                 }
                 break;
                 case ":l": {
@@ -105,8 +104,8 @@ public class InterfaceUser {
                     }
                     System.out.println(arq);
                         System.out.println("[INFO] As definições de tags não foram carregadas");
-                    String resultado[] = entradaUser.identificaTag_Arqivo(arq);
-                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+resultado);
+                    String resultadol[] = entradaUser.identificaTag_Arqivo(arq);
+                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+resultadol);
 
                 }
                 break;
@@ -160,36 +159,42 @@ public class InterfaceUser {
                     if(num==1){
                         System.out.println("\tArquivo tags.lex:\n");
                         System.out.println("Informe o caminho do arquivo:");
-                        caminho = ler.next();
-                            if(caminho==null){
+                        String caminho1 = ler.next();
+                            if(caminho1==null){
                                 System.out.println("[WARNING] Informe um caminho válido para o arquivo");
                             }
                         String arq;
-                        arq = Read(caminho);
+                        arq = read_Tag(caminho1);
                             if(arq==null){
                                 System.out.println("[ERRO] As definições de tags não foram carregadas");
                             }
-                        System.out.println(arq);
-                        System.out.println("[INFO] As definições de tags não foram carregadas");
-                        String resultado[] = entradaUser.identificaTag_Arqivo(arq);
-                        System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+resultado);
+                        
+                        
+                        String resultado1[] = entradaUser.identificaTag_Arqivo(arq);
+                        if(resultado1 == null) {
+                            System.out.println("[INFO] As definições de tags não foram carregadas");
+                        }
+                        System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+resultado1);
                     }
                     else if(num==2){
                         System.out.println("\tArquivo arquivo.txt:\n");
                         System.out.println("Informe o caminho do arquivo:");
-                        caminho = ler.next();
-                            if(caminho==null){
+                        String caminho2 = ler.next();
+                            if(caminho2==null){
                                 System.out.println("[WARNING] Informe um caminho válido para o arquivo");
                             }
                         String arq2;
-                        arq2 = Read(caminho);
+                        arq2 = read_Tag(caminho2);
                             if(arq2==null){
                                 System.out.println("[ERRO] As definições de tags não foram carregadas");
                             }
-                        System.out.println(arq2);
-                        System.out.println("[INFO] As definições de tags não foram carregadas");
-                        String resultado[] = entradaUser.identificaTag_Arqivo(arq2);
-                        System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+resultado);
+                        
+                        
+                        String resultado2[] = entradaUser.identificaTag_Arqivo(arq2);
+                        if(resultado2 == null) {
+                            System.out.println("[INFO] As definições de tags não foram carregadas");
+                        }
+                        System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+resultado2);
                     }
                     else 
                         System.out.println("[ERRO: Não informou um numero válido]");

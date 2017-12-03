@@ -1,9 +1,4 @@
-
-
-
-
 package br.ufop.view;
-package br.ufop
 
 import br.ufop.controller.Tag;
 import static br.ufop.model.GerArquivo.Read;
@@ -134,9 +129,12 @@ public class InterfaceUser {
                      * implementado pelo Controler (Gerenciador) metodo
                      * responsável comparaTags(string);
                      */
+                    String[] retorno_entrada;
                     System.out.println("------\t Realiza a divisão em tags da entrada do usuario \t-------");
-                    entradaUser.identificaTag(inicial);
-                    System.out.println("Tags inforomadas divididas com sucesso!!!\n");
+                    retorno_entrada = entradaUser.identificaTag(inicial);
+                    
+                    System.out.println("Saída se entrada de usuário é uma TAG: " + Arrays.toString(retorno_entrada));
+                    //System.out.println("Tags inforomadas divididas com sucesso!!!\n");
                     //identificaTag(inicial);
                     
                 }

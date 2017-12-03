@@ -22,13 +22,11 @@ public class EntradaUsuario {
                     if(inicial.contains(": ")){
                         
                         quebra = inicial.split(": ", 2);
-                        //nova_tag.setNome(quebra[0].toUpperCase());
-                        //nova_tag.setExpreg(quebra[1]);
                         //tag.nome = quebra[0].toUpperCase();
                         //tag.expreg = quebra[1];
                    
-                        //teste para split 
-                        System.out.println("nome "+quebra[0]+"\nexp "+quebra[1]);
+                        //teste para split ,saida da entrada com nome e expressão se valida
+                        System.out.println("nome "+quebra[0]+"\n expressao "+quebra[1]);
 
                         /*
                         for(i=0; i<tag.expreg.length(); i++){

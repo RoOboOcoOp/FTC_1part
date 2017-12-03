@@ -72,12 +72,15 @@ public class InterfaceUser {
                      Passa o caminho do arquivo com a string como parametro para o metodo de divisão das tags.
                      */
                     String arq = ("\\input.txt");
-
-                    if (!WriteTag(caminho + arq, inicial)) {
-                        System.out.println("[ERRO] Arquivo não foi salvo!");
+                    
+                    
+                    if (!Read(caminho)) {
+                        System.out.println("[ERRO] Arquivo não foi lido!");
                     } else {
-                        System.out.println("[INFO]Arquivo salvo com sucesso!");
+                        System.out.println("[INFO]Arquivo foi lido com sucesso!");
                     }
+                    
+                    String resultado[] = entradaUser.identificaTag_Arqivo(arq);
                 }
                 break;
                 case ":l": {

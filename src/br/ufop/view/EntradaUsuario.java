@@ -9,6 +9,7 @@ import java.lang.*;
 //Libs
 import br.ufop.controller.PilhaExpressoes;
 import br.ufop.controller.Tag;
+import static sun.nio.ch.IOStatus.EOF;
 
 public class EntradaUsuario {
     public String[] identificaTag(String inicial) {
@@ -16,7 +17,6 @@ public class EntradaUsuario {
             //Tag nova_tag = new Tag();
             //Tag t new = tag(nome,expreg);
             int i;
-            int conter = inicial.length();
             String[] resultado = null;
                     String[] quebra;
                     if(inicial.contains(": ")){
@@ -37,15 +37,41 @@ public class EntradaUsuario {
                         */
                     resultado = quebra;
                     
-                    //resultado += new String[quebra.length resultado.length];
-                    /*StringBuilder medicamento = new StringBuilder();
-                    ItemContratacao item = new ItemContratacao();
-                        for (ItemContratacao item: contrato) {
-                            medicamento.apend(item.getDs_material());
-                        medicamento.append(";");
-                    }*/
-                    
+                                 
+                    }else{
+                        System.out.println("A String informada não é uma TAG.");
                     } 
+                    return resultado;
+    }
+    public String[] identificaTag_Arqivo(String arq) {
+           //PilhaExpressoes pilha = new PilhaExpressoes(); 
+            //Tag nova_tag = new Tag();
+            //Tag t new = tag(nome,expreg);
+            int i;
+            String[] resultado = null;
+                    String[] quebra;
+                    do{
+                        if(arq.contains(": ")){
+                        
+                            quebra = arq.split(": ", 2);
+                            //nova_tag.setNome(quebra[0].toUpperCase());
+                            //nova_tag.setExpreg(quebra[1]);
+                            //tag.nome = quebra[0].toUpperCase();
+                            //tag.expreg = quebra[1];
+                   
+                            //teste para split 
+                            System.out.println("nome "+quebra[0]+"\nexp "+quebra[1]);
+
+                            /*
+                            for(i=0; i<tag.expreg.length(); i++){
+                                //pilha.insere(tag.expreg.toString());
+                            }
+                            */
+                        resultado = quebra;
+                    
+                        }       
+                    
+                    }while(arq.contains(":")); 
                     return resultado;
     }
 }

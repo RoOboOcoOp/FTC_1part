@@ -174,7 +174,7 @@ public class InterfaceUser {
                         if(resultado1 == null) {
                             System.out.println("[INFO] As definições de tags não foram carregadas");
                         }
-                        System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+resultado1);
+                        System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+Arrays.toString(resultado1));
                     }
                     else if(num==2){
                         System.out.println("\tArquivo arquivo.txt:\n");
@@ -194,7 +194,7 @@ public class InterfaceUser {
                         if(resultado2 == null) {
                             System.out.println("[INFO] As definições de tags não foram carregadas");
                         }
-                        System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+resultado2);
+                        System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+Arrays.toString(resultado2));
                     }
                     else 
                         System.out.println("[ERRO: Não informou um numero válido]");

@@ -1,18 +1,15 @@
 package br.ufop.controller;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+/*Classe responsável pela estrutura de dados e metodos de uma pilha que irá manipular expressões regulares
+
+ * @author Fabio Humberto de Carvalho 13.2.8398 / Wuldson Fernandes 12.1.839 / Leonardo Oliveira 12.2.8343
+ * @version 1.0
+ * @since 03/12/2017
+ */
 
 //import java.util.LinkedList;
 //import java.util.List;
 
-/**
- *
- * @author UFOP
- */
 public class PilhaExpressoes{
     private String[] elementos;
     private int size;

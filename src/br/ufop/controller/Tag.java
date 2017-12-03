@@ -5,14 +5,15 @@ import java.util.Stack;
  *
  * @author UFOP
  */
-public class Tag {
+ public class Tag {
+    //objeto tag fará a comparação com a pilha
     private static String nome;
     private static String expreg;
         
-    public Tag (String nome, String expreg){
+    /*public Tag (String nome, String expreg){
         this.nome = nome;
         this.expreg = expreg;
-    }
+    }*/
         public String getNome() {
             return nome;
         }
@@ -33,17 +34,20 @@ public class Tag {
      */
     
     public static void identificaTag(String inicial){
-        Stack pilha = new Stack(); 
+        PilhaTag pilha = new PilhaTag(); 
         //Tag t new = tag(nome,expreg);
-        
         int i;
-        
+      
         if(inicial.contains(": ")){
             String[] quebra = inicial.split(": ", 2);
             nome = quebra[0];
             expreg = quebra[1];
-                for(i=0; i<expreg.length(); i++){
-                        //pilha.push(tag
+            
+            
+            System.out.println("quebra"+quebra[0]+"quebra2"+quebra[1]);
+                
+            for(i=0; i<expreg.length(); i++){
+                      //pilha.insere();
                 }
         }
         else{

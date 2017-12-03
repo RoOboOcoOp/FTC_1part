@@ -1,5 +1,6 @@
 package br.ufop.view;
 
+import static br.ufop.controller.Tag.identificaTag;
 import static br.ufop.model.GerArquivo.Read;
 import static br.ufop.model.GerArquivo.WriteTag;
 import static br.ufop.model.GerArquivo.WriteTagVet;
@@ -37,11 +38,6 @@ public class InterfaceUser {
         //entradas do usuário
         System.out.println("\t Informe a entrada \t");
         ler = new Scanner(System.in);
-        System.out.println("INT: 01+2+3+4+5+6+7+8+9+*.");
-        System.out.println("VAR: a+b+c+d+e+f+g+h+i+*");
-        System.out.println("SPACE:  ");
-        System.out.println("COMMENT: /*+*/.");
-        System.out.println("EQUALS: =");
         
         inicial = ler.nextLine();
         
@@ -54,10 +50,9 @@ public class InterfaceUser {
             System.out.println(":f - Realizar divisão em tags da string do arquivo informado;");
             System.out.println(":l - Carregar um arquivo com definições de tags;");
             System.out.println(":o - Especificar o caminho do arquivo de saída para a divisão em tags;");
-            System.out.println(":P - Realizar divisão em tags da entrada informada;");
+            System.out.println(":p - Realizar divisão em tags da entrada informada;");
             System.out.println(":s - Salvar as tags;");
             System.out.println(":t - Imprimir Tags válidas;");
-            System.out.println(":P - Realizar divisão em tags da entrada informada e exibe na tela;");
             System.out.println(":s - Salvar as tags.");
             System.out.println(":q - Sair do programa.\n");
 
@@ -138,8 +133,10 @@ public class InterfaceUser {
                      * responsável comparaTags(string);
                      */
                     System.out.println("------\t Realiza a divisão em tags da entrada do usuario \t-------");
+                    identificaTag(inicial);
                     System.out.println("Tags inforomadas divididas com sucesso!!!\n");
                     //identificaTag(inicial);
+                    
                 }
                 break;
                 case ":t":{

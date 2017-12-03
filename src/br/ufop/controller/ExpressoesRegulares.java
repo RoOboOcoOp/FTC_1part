@@ -9,7 +9,7 @@ package br.ufop.controller;
  * @version 0.01
  * @since 04/07/2017
  */
-public class ExpressoesTags {
+public class ExpressoesRegulares {
     //Estruturas com os padroes de expressão regular, classes regex
    private final String INT = "[0-9][9-0]*";
    private final String VAR = "[a-z][z-a]*[A-Z][Z-A]*[0-9][9-0]*";

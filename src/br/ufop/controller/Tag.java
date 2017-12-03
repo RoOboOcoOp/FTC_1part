@@ -7,8 +7,8 @@ import java.util.Stack;
  */
  public class Tag {
     //objeto tag fará a comparação com a pilha
-    private static String nome;
-    private static String expreg;
+    private  String nome;
+    private  String expreg;
         
     /*public Tag (String nome, String expreg){
         this.nome = nome;
@@ -35,18 +35,19 @@ import java.util.Stack;
     
     public static void identificaTag(String inicial){
         PilhaTag pilha = new PilhaTag(); 
+        Tag tag = new Tag();
         //Tag t new = tag(nome,expreg);
         int i;
       
         if(inicial.contains(": ")){
             String[] quebra = inicial.split(": ", 2);
-            nome = quebra[0];
-            expreg = quebra[1];
+            tag.nome = quebra[0];
+            tag.expreg = quebra[1];
             
             
             System.out.println("quebra"+quebra[0]+"quebra2"+quebra[1]);
                 
-            for(i=0; i<expreg.length(); i++){
+            for(i=0; i<tag.expreg.length(); i++){
                       //pilha.insere();
                 }
         }

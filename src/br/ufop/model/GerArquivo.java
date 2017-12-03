@@ -27,7 +27,7 @@ public class GerArquivo {
      * @return String
      * @throws IOException
      */
-	public static String Read(String Caminho){
+    public static String Read(String Caminho){
         String conteudo = "";
         try {
             FileReader arq = new FileReader(Caminho);
@@ -50,6 +50,33 @@ public class GerArquivo {
             return "";
         }
     }
+    
+    public static String read_Tag(String Caminho){
+        String conteudo = "";
+        try {
+            FileReader arq = new FileReader(Caminho);
+            BufferedReader lerArq = new BufferedReader(arq);
+            String linha="";
+            try {
+                linha = lerArq.readLine();
+                if(linha.contains(": ")){
+                    while(linha!=null){
+                        conteudo += linha+"\n\r";
+                        linha = lerArq.readLine();
+                    }
+                }
+                arq.close();
+                return conteudo;
+            } catch (IOException ex) {
+                System.out.println("Erro: Não foi possível ler o arquivo!");
+                return "";
+            }
+        } catch (FileNotFoundException ex) {
+            System.out.println("Erro: Caminho Invalido, tente novamente!");
+            return "";
+        }
+    }
+    
     /**
      * 
      * @param Caminho

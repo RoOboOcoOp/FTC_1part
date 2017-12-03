@@ -121,7 +121,7 @@ public class InterfaceUser {
                     System.out.println("Informe o caminho do arquivo:");
                     
                     caminho = ler.next();
-                         if(caminho==null){
+                        if(caminho==null){
                             System.out.println("[WARNING] Informe um caminho válido para o arquivo");
                         }
                     if (WriteTag(caminho + "\\output.txt", "[WARNING]Escrevendo arquivo....")) {
@@ -152,7 +152,47 @@ public class InterfaceUser {
                     /**
                      * Imprime todas as Tags validas salvas em arquivo
                      */
+                    int num;
+                    String caminho;
                     System.out.println("------\t Imprime as Tags válidas \t-------");
+                    System.out.println("\tQual arquivo gostaria de verificar primeiro?\n1- tags.lex\n2- arquivo.txt\n");
+                    num = ler.nextInt();
+                    if(num==1){
+                        System.out.println("\tArquivo tags.lex:\n");
+                        System.out.println("Informe o caminho do arquivo:");
+                        caminho = ler.next();
+                            if(caminho==null){
+                                System.out.println("[WARNING] Informe um caminho válido para o arquivo");
+                            }
+                        String arq;
+                        arq = Read(caminho);
+                            if(arq==null){
+                                System.out.println("[ERRO] As definições de tags não foram carregadas");
+                            }
+                        System.out.println(arq);
+                        System.out.println("[INFO] As definições de tags não foram carregadas");
+                        String resultado[] = entradaUser.identificaTag_Arqivo(arq);
+                        System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+resultado);
+                    }
+                    else if(num==2){
+                        System.out.println("\tArquivo arquivo.txt:\n");
+                        System.out.println("Informe o caminho do arquivo:");
+                        caminho = ler.next();
+                            if(caminho==null){
+                                System.out.println("[WARNING] Informe um caminho válido para o arquivo");
+                            }
+                        String arq2;
+                        arq2 = Read(caminho);
+                            if(arq2==null){
+                                System.out.println("[ERRO] As definições de tags não foram carregadas");
+                            }
+                        System.out.println(arq2);
+                        System.out.println("[INFO] As definições de tags não foram carregadas");
+                        String resultado[] = entradaUser.identificaTag_Arqivo(arq2);
+                        System.out.println("As TAGs válidas encontradas no arquivo tags.lex são: \n"+resultado);
+                    }
+                    else 
+                        System.out.println("[ERRO: Não informou um numero válido]");
                     break;
                 }
                 case ":q": {

@@ -105,6 +105,8 @@ public class InterfaceUser {
                     }
                     System.out.println(arq);
                         System.out.println("[INFO] As definições de tags não foram carregadas");
+                    String resultado[] = entradaUser.identificaTag_Arqivo(arq);
+                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+resultado);
 
                 }
                 break;
@@ -157,10 +159,11 @@ public class InterfaceUser {
                     /**
                      * Realiza a saída do programa
                      */
+                    System.out.println("[INFO]Saindo do programa, obrigado pela visita!!!!");
+                    exit = true;
+                    break;
                 }
-                System.out.println("[INFO]Saindo do programa, obrigado pela visita!!!!");
-                exit = true;
-                break;
+                
                 case ":s": {
                     /**
                      * Salva as tags no arquivo "file.txt"

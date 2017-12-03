@@ -21,27 +21,34 @@ public class EntradaUsuario {
             //Tag nova_tag = new Tag();
             //Tag t new = tag(nome,expreg);
             int i;
-
-                if(inicial.contains(": ")){
-                    String[] quebra = inicial.split(": ", 2);
-                    //nova_tag.setNome(quebra[0].toUpperCase());
-                    //nova_tag.setExpreg(quebra[1]);
-                    //tag.nome = quebra[0].toUpperCase();
-                    //tag.expreg = quebra[1];
+            int conter = inicial.length();
+            String[] resultado = "";
+                do{
+                    String[] quebra = "";
+                    if(inicial.contains(": ")){
+                        
+                        quebra = inicial.split(": ", 2);
+                        //nova_tag.setNome(quebra[0].toUpperCase());
+                        //nova_tag.setExpreg(quebra[1]);
+                        //tag.nome = quebra[0].toUpperCase();
+                        //tag.expreg = quebra[1];
                    
-                    //teste para split 
-                    System.out.println("nome "+quebra[0]+"\nexp "+quebra[1]);
+                        //teste para split 
+                        System.out.println("nome "+quebra[0]+"\nexp "+quebra[1]);
 
-                    /*
-                    for(i=0; i<tag.expreg.length(); i++){
+                        /*
+                        for(i=0; i<tag.expreg.length(); i++){
                               //pilha.insere(tag.expreg.toString());
+                        }
+                        */
                     }
-                    */
-                    return quebra;
+                    else{
+                        continue;
                 }
-                else{
-                    System.out.println("A String Informada não é uma Tag");
-                }
+                    resultado += quebra+resultado;
+                }while(conter!=0);
+                return resultado;
+                
         return null;        
     }
     

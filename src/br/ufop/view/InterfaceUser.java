@@ -138,6 +138,7 @@ public class InterfaceUser {
                      */
                     String[] retorno_entrada;
                     System.out.println("------\t Realiza a divisão em tags da entrada do usuario \t-------");
+                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
                     retorno_entrada = entradaUser.identificaTag(inicial);
                     
                     System.out.println("[INFO]Saída se entrada de usuário é uma TAG: " + Arrays.toString(retorno_entrada));
@@ -151,6 +152,8 @@ public class InterfaceUser {
                      * Imprime todas as Tags validas, tanto as de arquivo quanto as inseridas
                      */
                     System.out.println("------\t Imprime as Tags válidas \t-------");
+                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
+                    
                     
                     break;
                 }
@@ -160,6 +163,7 @@ public class InterfaceUser {
                      */
                 }
                 System.out.println("[INFO]Saindo do programa, obrigado pela visita!!!!");
+                System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
                 exit = true;
                 break;
                 case ":s": {
@@ -172,6 +176,8 @@ public class InterfaceUser {
                     String tagVet[];
 
                     System.out.println("------\t Salva as tags no arquivo \"file.txt\" \t-------");
+                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
+                    
                     System.out.println("Informe a quantidade de tags");
                     tags_qtde = ler.nextInt();
 

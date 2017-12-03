@@ -4,6 +4,7 @@ import br.ufop.controller.Tag;
 import static br.ufop.model.GerArquivo.Read;
 import static br.ufop.model.GerArquivo.WriteTag;
 import static br.ufop.model.GerArquivo.WriteTagVet;
+import static br.ufop.model.GerArquivo.read_Tag;
 import java.io.IOException;
 import java.lang.*;
 import java.util.Arrays;
@@ -71,16 +72,17 @@ public class InterfaceUser {
                     /*
                      Passa o caminho do arquivo com a string como parametro para o metodo de divisão das tags.
                      */
-                    String arq = ("\\input.txt");
+                    String arq;
+                    arq = read_Tag(caminho);
                     
-                    
-                    if (!Read(caminho)) {
-                        System.out.println("[ERRO] Arquivo não foi lido!");
-                    } else {
-                        System.out.println("[INFO]Arquivo foi lido com sucesso!");
+                    if(arq==null){
+                        System.out.println("[ERRO] O arquivo não foi lido");
                     }
+                    System.out.println(arq);
+                        System.out.println("[INFO] O arquivo foi lido!");
                     
                     String resultado[] = entradaUser.identificaTag_Arqivo(arq);
+                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+resultado);
                 }
                 break;
                 case ":l": {

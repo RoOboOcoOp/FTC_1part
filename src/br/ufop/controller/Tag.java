@@ -1,5 +1,4 @@
 package br.ufop.controller;
-//package br.ufop.view;
 import java.lang.*;
 /**
  *
@@ -21,17 +20,13 @@ import java.lang.*;
         public String getNome() {
             return nome;
         }
-
         public void setNome(String nome) {
           this.nome = nome;
         }
         public String getExpreg() {
           return expreg;
         }
-
         public void setExpreg(String expreg) {
           this.expreg = expreg;
         }
-        
-
 }

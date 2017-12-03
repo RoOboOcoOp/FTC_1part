@@ -115,22 +115,17 @@ public class InterfaceUser {
                     String caminho;
 
                     System.out.println("------\t Especifica o caminho do arquivo de saída \"output.txt\" para a divisão em tags \t------");
-                     System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
+                    System.out.println("Opção/Funcionalidade disponível versão 1 do trabalho!!!");
                     System.out.println("Informe o caminho do arquivo:");
                     
                     caminho = ler.next();
                          if(caminho==null){
                             System.out.println("[WARNING] Informe um caminho válido para o arquivo");
                         }
-                    
-
-                    /*
-                     Implementar o método que cria as tags.
-                     */
-                    if (WriteTag(caminho + "\\output.txt", "Ohhhhhh")) {
-                        System.out.println("[INFO]Arquivo foi salvo com sucesso!");
+                    if (WriteTag(caminho + "\\output.txt", "Escrevendo arquivo....")) {
+                        System.out.println("[INFO] Arquivo foi salvo com sucesso!");
                     } else {
-                        System.out.println("[ERRO] ao salvar o arquivo!");
+                        System.out.println("[ERRO] Ao salvar o arquivo!");
                     }
 
                 }

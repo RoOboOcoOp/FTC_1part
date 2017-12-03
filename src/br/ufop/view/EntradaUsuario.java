@@ -1,20 +1,16 @@
 package br.ufop.view;
 import java.lang.*;
+    /*Classe responsável pela pela identificação de uma expressão regular na entrada de um usuario
 
+ * @author Fabio Humberto de Carvalho 13.2.8398 / Wuldson Fernandes 12.1.839 / Leonardo Oliveira 12.2.8343
+ * @version 1.0
+ * @since 03/12/2017
+ */
 
+//Libs
 import br.ufop.controller.PilhaExpressoes;
 import br.ufop.controller.Tag;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-
-/**
- *
- * @author UFOP
- */
 public class EntradaUsuario {
     public String[] identificaTag(String inicial) {
            //PilhaExpressoes pilha = new PilhaExpressoes(); 

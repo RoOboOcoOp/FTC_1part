@@ -44,7 +44,8 @@ public class InterfaceUser {
             System.out.println(":l - Carregar um arquivo com definições de tags;");
             System.out.println(":o - Especificar o caminho do arquivo de saída para a divisão em tags;");
             System.out.println(":P - Realizar divisão em tags da entrada informada;");
-            System.out.println(":s - Salvar as tags.");
+            System.out.println(":s - Salvar as tags;");
+            System.out.println(":t - Imprimir Tags válidas;");
             System.out.println(":q - Sair do programa.\n");
 
             while (menu == null) {
@@ -127,6 +128,13 @@ public class InterfaceUser {
                     System.out.println("Tags inforomadas divididas com sucesso!!!\n");
                 }
                 break;
+                case ":t":{
+                    /**
+                     * Imprime todas as Tags validas, tanto as de arquivo quanto as inseridas
+                     */
+                    System.out.println("------\t Imprime as Tags válidas \t-------")
+                    break;
+                }
                 case ":q": {
                     /**
                      * Realiza a saída do programa

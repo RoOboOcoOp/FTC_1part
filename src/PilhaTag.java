@@ -12,17 +12,35 @@ import java.util.List;
  *
  * @author UFOP
  */
-public class PilhaTag extends Tag{
-    private List<Tag> tags = new LinkedList<Tag>();
-     public void insere(Tag tag) {
-        this.tags.add(tag);
-     }
 
+
+public class PilhaTag extends Tag{
+    private int size;
+    private String[] elementos;
+    private List<Tag> tag = new LinkedList<Tag>();
+    
+     public void insere(Tag tag) {
+        this.tag.add(tag);
+     }
   public Tag remove() {
-    return this.tags.remove(this.tags.size() - 1);
+    return this.tag.remove(this.tag.size() - 1);
   }
 
   public boolean vazia() {
-    return this.tags.size() == 0;
+    return this.tag.isEmpty();
   }
+  public int getsize(){
+      return size;
+  }
+  /*public String toString() {  
+		StringBuilder sb = new StringBuilder("[");  
+		for(int i = 0; i < size; i++) {  
+			sb.append(elements[i]);  
+			if(i < size - 1)  
+			  sb.append(" | ");  
+		}  
+		sb.append(">");  
+		return sb.toString();  
+            }
+    */
 }

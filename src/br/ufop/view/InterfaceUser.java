@@ -4,6 +4,7 @@ import br.ufop.controller.Tag;
 import static br.ufop.model.GerArquivo.Read;
 import static br.ufop.model.GerArquivo.WriteTag;
 import static br.ufop.model.GerArquivo.WriteTagVet;
+import static br.ufop.model.GerArquivo.read_Tag;
 import java.io.IOException;
 import java.lang.*;
 import java.util.Arrays;
@@ -71,13 +72,17 @@ public class InterfaceUser {
                     /*
                      Passa o caminho do arquivo com a string como parametro para o metodo de divisão das tags.
                      */
-                    String arq = ("\\input.txt");
-
-                    if (!WriteTag(caminho + arq, inicial)) {
-                        System.out.println("[ERRO] Arquivo não foi salvo!");
-                    } else {
-                        System.out.println("[INFO]Arquivo salvo com sucesso!");
+                    String arq;
+                    arq = read_Tag(caminho);
+                    
+                    if(arq==null){
+                        System.out.println("[ERRO] O arquivo não foi lido");
                     }
+                    System.out.println(arq);
+                        System.out.println("[INFO] O arquivo foi lido!");
+                    
+                    String resultado[] = entradaUser.identificaTag_Arqivo(arq);
+                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+resultado);
                 }
                 break;
                 case ":l": {
@@ -100,6 +105,8 @@ public class InterfaceUser {
                     }
                     System.out.println(arq);
                         System.out.println("[INFO] As definições de tags não foram carregadas");
+                    String resultado[] = entradaUser.identificaTag_Arqivo(arq);
+                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+resultado);
 
                 }
                 break;
@@ -152,10 +159,11 @@ public class InterfaceUser {
                     /**
                      * Realiza a saída do programa
                      */
+                    System.out.println("[INFO]Saindo do programa, obrigado pela visita!!!!");
+                    exit = true;
+                    break;
                 }
-                System.out.println("[INFO]Saindo do programa, obrigado pela visita!!!!");
-                exit = true;
-                break;
+                
                 case ":s": {
                     /**
                      * Salva as tags no arquivo "file.txt"

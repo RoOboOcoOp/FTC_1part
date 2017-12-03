@@ -5,15 +5,36 @@
  */
 package br.ufop.controller;
 
+import java.util.Stack;
+
 /**
  *
  * @author UFOP
  */
 public class Tag {
     String nome;
+    String expreg;
     //Expressão regular com pilha
-    //List<String> expressaoTag = new ArrayList<String>
+    //private List<Tag> tags = new LinkedList<Tag>();
+    Stack pilha = new Stack(); 
     
-    public String 
+    public void String Identifica_Tag(String inicial){
+        int i;
+        if(inicial.contains(":")){
+            String[] quebra = inicial.split(":", 2);
+            nome = quebra[0];
+            expreg = quebra[1];
+        }
+        else{
+            System.out.println("A String Informada ão é uma Tag");
+        }
+        for(i=0; i<expreg.length(); i++){
+            pilha.push(expreg.toString(i));
+        }
+    }
+    
+    public static String Encontra_Tag(String){
+        
+    }
     
 }

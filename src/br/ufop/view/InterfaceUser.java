@@ -81,7 +81,7 @@ public class InterfaceUser {
                         System.out.println("[INFO] O arquivo foi lido!");
                     
                     String resultadof[] = entradaUser.identificaTag_Arqivo(arq);
-                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+resultadof);
+                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+Arrays.toString(resultadof));
                 }
                 break;
                 case ":l": {
@@ -105,7 +105,7 @@ public class InterfaceUser {
                     System.out.println(arq);
                         System.out.println("[INFO] As definições de tags não foram carregadas");
                     String resultadol[] = entradaUser.identificaTag_Arqivo(arq);
-                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+resultadol);
+                    System.out.println("As TAGs válidas encontradas no arquivo: \n"+Arrays.toString(resultadol));
 
                 }
                 break;

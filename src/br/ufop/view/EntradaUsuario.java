@@ -22,8 +22,7 @@ public class EntradaUsuario {
                     if(inicial.contains(": ")){
                         
                         quebra = inicial.split(": ", 2);
-                        //tag.nome = quebra[0].toUpperCase();
-                        //tag.expreg = quebra[1];
+                        
                    
                         //teste para split ,saida da entrada com nome e expressão se valida
                         System.out.println("nome "+quebra[0]+"\n expressao "+quebra[1]);
@@ -52,10 +51,7 @@ public class EntradaUsuario {
                         if(arq.contains(": ")){
                         
                             quebra = arq.split(": ", 2);
-                            //nova_tag.setNome(quebra[0].toUpperCase());
-                            //nova_tag.setExpreg(quebra[1]);
-                            //tag.nome = quebra[0].toUpperCase();
-                            //tag.expreg = quebra[1];
+                            
                    
                             //teste para split 
                             System.out.println("nome "+quebra[0]+"\nexp "+quebra[1]);
@@ -65,11 +61,10 @@ public class EntradaUsuario {
                                 //pilha.insere(tag.expreg.toString());
                             }
                             */
-                        
-                        
-                        }       
-                    
-                     
+                        }
+                        else{
+                            System.out.println("A String informada não é uma TAG.");
+                        }
                     resultado = quebra;
                     
                     return resultado;

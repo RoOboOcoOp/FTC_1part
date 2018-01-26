@@ -16,7 +16,28 @@ public class PilhaExpressoes{
     
     //private final List<Tag> tag = new LinkedList<>();
     //PilhaTag pilha = new PilhaTag();
-   
+   /*
+    private final Container<Express> expressao = new Container<Express>(this, 1){};
+
+    private final Container<Container<Pilha>> next = new Container<Container<Pilha>>(this, 1){};
+
+    public Express getExpressao() {
+        return expressao.get();
+    }
+
+    public Express setExpressao(Express newExpressao) {
+        return expressao.set(newExpressao);
+    }
+
+    public Container<Pilha> getNext() {
+        return next.get();
+    }
+
+    public Container<Pilha> setNext(Container<Pilha> newNext) {
+        return next.set(newNext);
+    }
+}
+    */
     public PilhaExpressoes(int capacity) {  
 	/* 
 	* Utilizamos o método abs da classe Math só pra evitar que se tente criar uma pilha "devedora"... 

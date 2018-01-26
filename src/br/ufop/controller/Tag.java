@@ -8,7 +8,8 @@ import java.lang.*;
  */
 
  public class Tag{
-    /*objeto tag fará a comparação com a pilha
+    
+     /*objeto tag fará a comparação com a pilha
      Construtor da classe com atributos nome e expressão regular
      */
     String nome;
